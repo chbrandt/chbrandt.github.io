@@ -17,3 +17,6 @@
 > for he who is of a calm and happy nature will hardly feel the pressure of age, but to him who is of an opposite disposition youth and age are equally a burden.
 >> -- Cephalus, to Socrates in: _The Republic_, Plato.
 
+
+> Nos quartéis lhes ensinam uma antiga lição, de morrer pela pátria e viver sem razão
+>> -- _Pra não dizer que não falei das flores_, Geraldo Vandré
