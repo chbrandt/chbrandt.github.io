@@ -21,7 +21,7 @@
 
 
 > Nos quartéis lhes ensinam uma antiga lição, de morrer pela pátria e viver sem razão.
-> 
->> Actually a question, I'd say.
 >
 > -- _Pra não dizer que não falei das flores_, Geraldo Vandré
+> 
+>> Actually a question, I'd say.
