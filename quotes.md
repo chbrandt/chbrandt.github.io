@@ -2,7 +2,8 @@
 > who make royal use of it; the proles are merely encouraged to think that they are "we",
 > just as they are encouraged to think that they actually vote.
 > Far from being "we", they are merely "them".
->> -- Clarence Brown, in the Introduction of: _We_, Yevgeny Zamyatin.
+> 
+> -- Clarence Brown, in the Introduction of: _We_, Yevgeny Zamyatin.
 
 
 > "Is life harder towards the end, or what report do you give of it?"
@@ -15,8 +16,12 @@
 > For certainly old age has a great sense of calm and freedom; when the passions relax their hold, then, [...] we are freed from the grasp not of one mad master only, but of many.
 > The truth is, Socrates, that these regrets, and also the complains about relation, are to be attributed to the same cause, which not old age, but men's characters and tempers;
 > for he who is of a calm and happy nature will hardly feel the pressure of age, but to him who is of an opposite disposition youth and age are equally a burden.
->> -- Cephalus, to Socrates in: _The Republic_, Plato.
+> 
+> -- Cephalus, to Socrates in: _The Republic_, Plato.
 
 
-> Nos quartéis lhes ensinam uma antiga lição, de morrer pela pátria e viver sem razão
->> -- _Pra não dizer que não falei das flores_, Geraldo Vandré
+> Nos quartéis lhes ensinam uma antiga lição, de morrer pela pátria e viver sem razão.
+> 
+>> Actually a question, I'd say.
+>
+> -- _Pra não dizer que não falei das flores_, Geraldo Vandré
