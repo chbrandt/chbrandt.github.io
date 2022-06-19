@@ -25,3 +25,8 @@
 > -- _Pra não dizer que não falei das flores_, Geraldo Vandré
 > 
 >> Actually a question, I'd say.
+
+> E a coisa mais certa de todas as coisas,
+> Não vale um caminho sob o sol
+>
+> -- _Força Estranha_, Caetano Veloso
