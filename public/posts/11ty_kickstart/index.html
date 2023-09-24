@@ -74,7 +74,7 @@ npm install @11ty/eleventy --save-dev
 touch base.njk
 </code></pre>
 <p><code>base.njk</code>:</p>
-<pre><code class="language-html">{% raw %}
+<pre><code class="language-html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
@@ -97,7 +97,7 @@ touch base.njk
 &lt;/body&gt;
 
 &lt;/html&gt;
-{% endraw %}
+
 </code></pre>
 <p>Create <code>index.md</code>:</p>
 <pre><code class="language-bash">touch src/index.md
@@ -171,7 +171,7 @@ First post
 </code></pre>
 <p>Update <code>index.md</code> to include posts:</p>
 <p><code>index.md</code>:</p>
-<pre><code class="language-markdown">{% raw %}
+<pre><code class="language-markdown">
 ---
 title: Hallo Welt
 layout: &quot;base.njk&quot;
@@ -184,7 +184,7 @@ Hallo, Carlos!
 - [{{ post.data.title }}]({{ post.url }})
 
 {% endfor %}
-{% endraw %}
+
 </code></pre>
 
     </main>

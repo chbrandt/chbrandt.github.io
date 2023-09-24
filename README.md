@@ -14,6 +14,28 @@ under 3 minutes. The first blog of this site is the steps presented in the
 video, [`src/posts/11ty_kickstart.md`](src/posts/11ty_kickstart.md).
 
 
+## Build and Run Site
+
+After cloning this repo, *cd* into it and install the node packages:
+
+```bash
+npm install
+```
+
+Then you can start the (11ty) server:
+
+```bash
+npm build   # just compile the files
+npm start   # runs the server
+```
+
+> `npm build` [`start`] are aliases (in `package.json`) for:
+>
+> ```bash
+> npx @11ty/eleventy [--serve]
+> ```
+
+
 ## Notes
 
 Some development/developer notes.
