@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>11ty Kickstart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>11ty Kickstart</h1>
+    </header>
+
+    <main>
+        <blockquote>
+<p>This note is basically the transcription of excelent video-tutorial
+<a href="https://youtu.be/BKdQEXqfFA0?si=JpP1TBlvf4lMxnTg">&quot;Build an 11ty Site in 3 Minutes&quot;</a>
+in <em>11ty Rocks!</em> YouTube channel.</p>
+</blockquote>
+<ul>
+<li>Install 11ty:</li>
+</ul>
+<pre><code class="language-bash">npm init -y
+npm install @11ty/eleventy --save-dev
+</code></pre>
+<ul>
+<li>Set commands for <em>start/build</em> in <code>package.json</code>.</li>
+</ul>
+<p><code>package.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;chbrandt.github.io&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;eleventy --serve&quot;,
+    &quot;build&quot;: &quot;eleventy&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;devDependencies&quot;: {
+    &quot;@11ty/eleventy&quot;: &quot;^2.0.1&quot;
+  }
+}
+</code></pre>
+<ul>
+<li>Update Input/Output directory</li>
+</ul>
+<pre><code class="language-bash">touch .eleventy.js
+</code></pre>
+<p><code>.eleventy.js</code>:</p>
+<pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+    return {
+        dir: {
+            input: &quot;src&quot;,
+            output: &quot;public&quot;
+        }
+    };
+};
+</code></pre>
+<p>Create directories:</p>
+<pre><code class="language-bash">mkdir src public
+</code></pre>
+<ul>
+<li>Create Index and Layout files. Using layouts from the start is recommended.</li>
+</ul>
+<p>Layouts are expected to be in <code>src/_includes</code> directory (nunjucks file):</p>
+<pre><code class="language-bash">mkdir src/_includes
+touch base.njk
+</code></pre>
+<p><code>base.njk</code>:</p>
+<pre><code class="language-html">{% raw %}
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;title&gt;{{ title }}&lt;/title&gt;
+    &lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+    &lt;!-- &lt;link rel=&quot;stylesheet&quot; href=&quot;&quot;&gt; --&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;{{ title }}&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        {{ content | safe }}
+    &lt;/main&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+{% endraw %}
+</code></pre>
+<p>Create <code>index.md</code>:</p>
+<pre><code class="language-bash">touch src/index.md
+</code></pre>
+<p><code>index.md</code>:</p>
+<pre><code class="language-markdown">---
+title: Hallo Welt
+layout: &quot;base.njk&quot;
+---
+
+Hallo, Carlos!
+</code></pre>
+<ul>
+<li>Run 11ty</li>
+</ul>
+<p>Start eleventy:</p>
+<pre><code class="language-bash">npm start
+</code></pre>
+<p>See in the browser at <code>localhost:8080</code>.</p>
+<ul>
+<li>Add some style</li>
+</ul>
+<p>Create css file:</p>
+<pre><code class="language-bash">touch src/style.css
+</code></pre>
+<p><code>style.css</code>:</p>
+<pre><code class="language-css">body {
+    font-family: sans-serif;
+}
+</code></pre>
+<p>Include the stylesheet in the (html) template, make sure line:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+</code></pre>
+<p>is in the <code>&lt;head&gt;</code> section.</p>
+<p>Then we have to make 11ty aware of the CSS file by editing the config,
+<code>.eleventy.js</code>:</p>
+<pre><code class="language-js">module.exports = function (eleventyConfig) {
+    eleventyConfig.addPassthroughCopy(&quot;./src/style.css&quot;);
+
+    return {
+        dir: {
+            input: &quot;src&quot;,
+            output: &quot;public&quot;
+        }
+    };
+};
+</code></pre>
+<ul>
+<li>Create a blog</li>
+</ul>
+<p>Create <code>posts/</code> directory:</p>
+<pre><code class="language-bash">mkdir src/posts
+touch src/posts/11ty_kickstart.md
+</code></pre>
+<p><code>11ty_kickstart.md</code>:</p>
+<pre><code class="language-markdown">---
+title: 11ty Kickstart
+---
+
+First post
+</code></pre>
+<p>Add a directory data file, create a <code>posts.json</code> file in <code>posts/</code>:</p>
+<pre><code class="language-bash">touch src/posts/posts.json
+</code></pre>
+<p>Configure <code>base.njk</code> layout per default and tag <em>#posts</em>:</p>
+<p><code>posts.json</code>:</p>
+<pre><code class="language-json">{
+    &quot;layout&quot;: &quot;base.njk&quot;,
+    &quot;tags&quot;: &quot;posts&quot;
+}
+</code></pre>
+<p>Update <code>index.md</code> to include posts:</p>
+<p><code>index.md</code>:</p>
+<pre><code class="language-markdown">{% raw %}
+---
+title: Hallo Welt
+layout: &quot;base.njk&quot;
+---
+
+Hallo, Carlos!
+
+{% for post in collections.posts %}
+
+- [{{ post.data.title }}]({{ post.url }})
+
+{% endfor %}
+{% endraw %}
+</code></pre>
+
+    </main>
+
+    <!-- <script src="" async defer></script> -->
+</body>
+
+</html>
