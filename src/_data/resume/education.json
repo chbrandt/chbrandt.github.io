@@ -1,0 +1,58 @@
+[
+    {
+        "title": "PhD",
+        "area": "Astrophysics",
+        "topic": "Active Galactic Nuclei",
+        "keywords": ["Data Analysis", "Databases", "Virtual Observatories"],
+        "location": {
+            "country": "Italy",
+            "city": "Roma"
+        },
+        "institution": {
+            "name": "Sapienza Univeristy of Rome",
+            "url": "https://www.uniroma1.it"
+        },
+        "co-institutions": [
+            {
+                "name": "ASI Science Data Center",
+                "url": "https://www.ssdc.asi.it"
+            },
+            {
+                "name": "ICRANet",
+                "url": "https://www.icranet.org"
+            }
+        ]
+    },
+    {
+        "title": "MSc",
+        "area": "Computational Modeling",
+        "topic": "Gravitational Lenses",
+        "keywords": ["Simulation", "Image Processing", "Distributed Computing"],
+        "location": {
+            "country": "Brazil",
+            "city": "Rio de Janeiro"
+        },
+        "institution": {
+            "name": "National Scientific Computing Laboratory",
+            "url": "https://www.lncc.br"
+        },
+        "co-institutions": [{
+            "name": "Brazilian Physical Research Center",
+            "url": "https://www.cbpf.br"
+        }]
+    },
+    {
+        "title": "BSc",
+        "area": "Physics",
+        "topic":"Astronomy",
+        "keywords": ["Data Analysis", "GNU/Linux", "Simulation"],
+        "location": {
+            "country": "Brazil",
+            "city": "Porto Alegre"
+        },
+        "institution": {
+            "name": "Federal University of Rio Grande do Sul",
+            "url": "https://www.ufrgs.br"
+        }
+    }
+]
